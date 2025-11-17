@@ -16,7 +16,21 @@ async function includeHTML(selector, url) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("#header", "../Header/Header.html");
-  includeHTML("#sidebar", "../SideBar/SideBar.html");
+document.addEventListener("DOMContentLoaded", async () => {
+  await includeHTML("#header", "../Header/Header.html");
+  await includeHTML("#sidebar", "../SideBar/SideBar.html");
+  setupSidebarNavigation();
 });
+
+function setupSidebarNavigation() {
+  const sidebar = document.querySelector("#sidebar");
+  const options = sidebar.querySelectorAll("li");
+
+  options.forEach((option) => {
+    option.style.cursor = "pointer"; // show pointer on hover
+    option.addEventListener("click", () => {
+      const page = option.textContent.trim().toLowerCase(); // e.g., "dashboard" or "reports"
+      console.log("Clicked:", page);
+    });
+  });
+}
