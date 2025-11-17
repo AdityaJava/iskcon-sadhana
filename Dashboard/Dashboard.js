@@ -1,7 +1,6 @@
 console.log("hey");
 
 async function includeHTML(selector, url) {
-  debugger;
   const dashBoardElement = document.querySelector(selector);
   if (!dashBoardElement) return;
   try {
