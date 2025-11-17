@@ -18,5 +18,5 @@ async function includeHTML(selector, url) {
 
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML("#header", "../Header/Header.html");
-  includeHTML("#dashboard", "../SideBar/SideBar.html");
+  includeHTML("#sidebar", "../SideBar/SideBar.html");
 });
