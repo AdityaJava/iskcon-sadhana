@@ -1,0 +1,12 @@
+I want to build a app for iskcon
+1. Admin or reporter- Who can see details of his students like
+   . daily rounds chanted
+  . Sleep and wakeup time
+  . Hearing hours
+  . Reading hours  . Selects who reports to him (Via email ID)
+
+2. Student who can input 
+  . his daily rounds chanted
+  . Sleep and wakeup time
+  . Hearing hours
+  . Reading hours
