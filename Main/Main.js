@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await includeHTML("#header", "../Header/Header.html");
   await includeHTML("#sidebar", "../SideBar/SideBar.html");
   setupSidebarNavigation();
+  setupHeaderHandlers();
 });
 
 function setupSidebarNavigation() {
@@ -40,17 +41,28 @@ function setupSidebarNavigation() {
         console.warn("No page mapped for:", page);
         return;
       }
-      const contentDiv = document.querySelector("#content");
-      try {
-        const response = await fetch(pageUrl);
-        if (!response.ok) {
-          contentDiv.innerHTML = `<p>Error loading ${page}</p>`;
-        }
-        const html = await response.text();
-        contentDiv.innerHTML = html;
-      } catch (ex) {
-        console.error("Exception:", ex);
-      }
+      loadInsideContent(pageUrl);
     });
+  });
+}
+
+async function loadInsideContent(pageUrl) {
+  const contentDiv = document.querySelector("#content");
+  try {
+    const response = await fetch(pageUrl);
+    if (!response.ok) {
+      contentDiv.innerHTML = `<p>Error loading ${page}</p>`;
+    }
+    const html = await response.text();
+    contentDiv.innerHTML = html;
+  } catch (ex) {
+    console.error("Exception:", ex);
+  }
+}
+
+function setupHeaderHandlers() {
+  const addDailySadhanaButton = document.getElementById("add-daily-sadhana");
+  addDailySadhanaButton.addEventListener("click", () => {
+    console.log("button clicked");
   });
 }
