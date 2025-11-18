@@ -62,7 +62,7 @@ async function loadInsideContent(pageUrl) {
 
 function setupHeaderHandlers() {
   const addDailySadhanaButton = document.getElementById("add-daily-sadhana");
-  addDailySadhanaButton.addEventListener("click", () => {
+  addDailySadhanaButton.addEventListener("click", async () => {
     console.log("button clicked");
     const sadhanaForm = "../SadhanaForm/SadhanaForm.html";
     loadInsideContent(sadhanaForm);
