@@ -32,7 +32,7 @@ function setupSidebarNavigation() {
       const page = option.textContent.trim().toLowerCase(); // e.g., "dashboard" or "reports"
       console.log("Clicked:", page);
       let pageUrl = "";
-      if (page === "dashboard") {
+      if (page === "sadhanadashboard") {
         pageUrl = "../SadhanaDashboard/SadhanaDashboard.html";
       } else if (page === "reports") {
         pageUrl = "Reports.html";
