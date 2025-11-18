@@ -26,14 +26,12 @@ function setupSidebarNavigation() {
   const sidebar = document.querySelector("#sidebar");
   const options = sidebar.querySelectorAll("li");
   console.log("calloinnng");
-  debugger;
   options.forEach((option) => {
     option.style.cursor = "pointer"; // show pointer on hover
     option.addEventListener("click", async () => {
       const page = option.textContent.trim().toLowerCase(); // e.g., "dashboard" or "reports"
       console.log("Clicked:", page);
       let pageUrl = "";
-      debugger;
       if (page === "dashboard") {
         pageUrl = "../SadhanaDashboard/SadhanaDashboard.html";
       } else if (page === "reports") {
