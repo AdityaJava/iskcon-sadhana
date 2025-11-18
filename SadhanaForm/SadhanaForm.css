@@ -14,3 +14,10 @@
   padding: 6px;
   width: 100%;
 }
+
+.sadhana-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
