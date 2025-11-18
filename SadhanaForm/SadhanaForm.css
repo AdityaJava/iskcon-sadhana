@@ -1,0 +1,16 @@
+.sadhana-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 250px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.sadhana-form label {
+  font-weight: 600;
+}
+.sadhana-form input {
+  padding: 6px;
+  width: 100%;
+}
