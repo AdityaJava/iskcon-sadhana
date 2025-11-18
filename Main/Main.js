@@ -65,6 +65,7 @@ function setupHeaderHandlers() {
   addDailySadhanaButton.addEventListener("click", async () => {
     console.log("button clicked");
     const sadhanaForm = "../SadhanaForm/SadhanaForm.html";
-    loadInsideContent(sadhanaForm);
+    await loadInsideContent(sadhanaForm);
+    window.initSadhanaForm();
   });
 }
